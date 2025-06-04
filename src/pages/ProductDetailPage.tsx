@@ -8,7 +8,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useCart } from '@/contexts/CartContext';
 import { useToast } from '@/hooks/use-toast';
 import { useProduct } from '../hooks/useApi';
-import { useParams } from 'react-router-dom';
 
 
 function ProductDetailPage() {
