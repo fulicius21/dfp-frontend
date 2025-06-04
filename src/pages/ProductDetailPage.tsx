@@ -10,23 +10,6 @@ import { useToast } from '@/hooks/use-toast';
 import { useProduct } from '../hooks/useApi';
 
 
-function ProductDetailPage() {
-  const { id } = useParams();
-  const { product, loading, error } = useProduct(id);
-
-  if (loading) return <div>Lädt Produkt...</div>;
-  if (error) console.warn('API Error:', error);
-
-  return (
-    <div>
-      <h1>{product?.name}</h1>
-      <p>{product?.description}</p>
-      <span>€{product?.price}</span>
-      <img src={product?.images[0]} alt={product?.name} />
-    </div>
-  );
-}
-
 
 // Types
 interface Product {
